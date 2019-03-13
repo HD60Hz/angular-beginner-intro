@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {TodoListService} from './services/todo-list.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,11 @@ export class AppComponent implements OnInit{
   todoArray: string[] = [];
 
   public form: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private todoListService: TodoListService) {}
 
   ngOnInit(): void {
     this.constructForm();
+    this.todoListService.getMock().subscribe((value) => { this.todoArray = value; });
   }
 
   constructForm() {

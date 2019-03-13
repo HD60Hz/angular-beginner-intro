@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ReversePipe} from './shared/pipe/reverse-pipe';
+import {TodoListService} from './services/todo-list.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import {ReversePipe} from './shared/pipe/reverse-pipe';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TodoListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
