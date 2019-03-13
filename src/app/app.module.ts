@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ReversePipe} from './shared/pipe/reverse-pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
